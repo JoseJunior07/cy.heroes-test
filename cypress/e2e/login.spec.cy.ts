@@ -1,5 +1,5 @@
 import userData from '../fixtures/users/user-data.json'
-import LoginPage from '../pages/loginPage.ts'
+import LoginPage from '../pages/loginPage'
 
 const loginPage = new LoginPage()
 
