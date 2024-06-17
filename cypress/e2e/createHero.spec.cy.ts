@@ -13,7 +13,7 @@ describe('Create New Hero ', () => {
     })
   
   
-    it('Criação de novo herói, com dados completos', () => {
+    it.only('Criação de novo herói, com dados completos', () => {
         loginPage.clickLoginButton()
         loginPage.loginWithUser(userData.userSuccess.email, userData.userSuccess.password)
         createHeroPage.clickCreateHeroButton()
@@ -31,5 +31,12 @@ describe('Create New Hero ', () => {
         createHeroPage.checkValidationError()
           
    })
+    it.only('Excluir heróis', () => {
+      // Ações de login
+      loginPage.clickLoginButton();
+      loginPage.loginWithUser(userData.userSuccess.email, userData.userSuccess.password);
+      createHeroPage.deleteHero()
+    
+  });
 
   })
